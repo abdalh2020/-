@@ -1,0 +1,6 @@
+from sklearn.tree import DecisionTreeClassifier
+X = [[1],[2],[3],[7],[8],[9]]
+y = ["راسب","راسب","راسب","ناجح","ناجح","ناجح"]
+model = DecisionTreeClassifier().fit(X, y)
+hours = int(input("عدد ساعات المذاكرة: "))
+print("التوقع:", model.predict([[hours]])[0])
